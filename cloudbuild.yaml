@@ -5,5 +5,3 @@ steps:
     args: ['go', 'test']
   - name: 'gcr.io/cloud-builders/gcloud'
     args: ['functions', 'deploy', 'HelloHTTP', '--trigger-http', '--runtime', 'go113']
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['functions', 'add-iam-policy-binding', 'HelloHTTP', '--member', 'allUsers', '--role', 'roles/cloudfunctions.invoker']
