@@ -1,0 +1,9 @@
+- name: 'gcr.io/cloud-builders/gcloud'
+ args:
+ — functions
+ — deploy
+ — — runtime=go113
+ — — trigger-http
+ — HelloHTTP # Function name
+ waitFor: ['_']
+ id: 'deploying-a-serverless-function'
